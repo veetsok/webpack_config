@@ -20,7 +20,13 @@ module.exports = {
     rules: [
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
-        type: "asset/resource",
+        type: "asset",
+        //Регулирует ограничение загрузки изображений
+        // parser: {
+        //   dataUrlCondition: {
+        //     maxSize: 30 * 1024,
+        //   },
+        // },
       },
       {
         test: /\.(s[ac]|c)ss$/i,
